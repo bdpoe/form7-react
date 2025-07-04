@@ -8,7 +8,7 @@ function App() {
     dni: "",
   });
 
-  const [formKey, setFormKey] = useState(0);
+  const [formKey]= useState(0);
   const [state, handleSubmit] = useForm("xyzjvwww"); 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,10 +22,7 @@ function App() {
       setUser({ ...user, [name]: value });
     }
   };
-
-  const volverAlFormulario = () => {
-    setUser({ nombre: "", apellido: "", dni: "" });
-  };
+  
 
   if (state.succeeded) {
     return (
