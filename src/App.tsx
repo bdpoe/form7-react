@@ -8,7 +8,7 @@ function App() {
     dni: "",
   });
 
-  const [formKey]= useState(0);
+  //const [formKey]= useState(0);
   const [state, handleSubmit] = useForm("xyzjvwww"); 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +22,7 @@ function App() {
       setUser({ ...user, [name]: value });
     }
   };
-  
+
 
   if (state.succeeded) {
     return (
@@ -36,7 +36,7 @@ function App() {
   }
 
   return (
-    <div key={formKey} style={styles.centeredBox}>
+    <div style={styles.centeredBox}>
       <div style={styles.card}>
         <h1 style={styles.title}>FORMULARIO</h1>
         <p style={styles.subtitle}>Ingresa tus datos por favor</p>
